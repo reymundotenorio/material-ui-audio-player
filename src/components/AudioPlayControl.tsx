@@ -46,6 +46,7 @@ const AudioPlayControl: React.FunctionComponent<IAudioPlayControlProps> = ({
     case PLAYER.STATUS.PLAY:
       return (
         <PauseIcon
+          id="pauseButton"
           fontSize="large"
           onClick={pauseAudio}
           className={cx(classes.icon, classNames.pauseIcon)}
@@ -54,6 +55,7 @@ const AudioPlayControl: React.FunctionComponent<IAudioPlayControlProps> = ({
     case PLAYER.STATUS.STOP:
       return (
         <ReplayIcon
+          id="replayButton"
           fontSize="large"
           onClick={replayAudio}
           className={cx(classes.icon, classNames.replayIcon)}
@@ -62,6 +64,7 @@ const AudioPlayControl: React.FunctionComponent<IAudioPlayControlProps> = ({
     default:
       return (
         <PlayIcon
+          id="playButton"
           fontSize="large"
           onClick={playAudio}
           className={cx(classes.icon, classNames.playIcon)}
